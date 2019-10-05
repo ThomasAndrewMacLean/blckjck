@@ -1,0 +1,10 @@
+#dealerpoints,
+#playerpoints {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background: lightblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
