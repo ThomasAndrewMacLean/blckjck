@@ -1,3 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+
+}
+
+body,
+html {
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body {
+    background: url("./images/jose-pablo-iglesias-kpY9410Ha2s-unsplash.jpg") no-repeat center center fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #bfd351;
+    background-blend-mode: difference;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+main,
+header {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+}
+
+header {
+    background: #0b2c9b;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    height: calc(100% - 130px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.hands {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.hand {
+    height: 50%;
+}
+
+svg {
+    display: flex;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background: #0b2c9b;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    border: 5px solid white;
+}
+
+.buttons {
+    background: #0b2c9b;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2 {
+    display: inline;
+    margin-right: 2rem;
+}
+
 #dealerpoints,
 #playerpoints {
     height: 50px;
@@ -6,5 +99,11 @@
     background: lightblue;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: inline-flex;
+}
+
+#dealer,
+#player {
+    margin-top: 2rem;
+    font-size: 3rem;
 }

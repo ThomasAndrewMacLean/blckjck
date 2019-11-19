@@ -2,32 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BLCKJCK</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h1>BLCKJCK!</h1>
+
+        <button id="dealButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-refresh-cw">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+        </button>
     </header>
     <main>
+        <div class="hands">
 
-        <div class="hand">
-            <h1>Dealer</h1>
-            <span id="dealerpoints"></span>
-            <div id="dealer"></div>
+            <div class="hand">
+                <h2>Dealer</h2>
+                <span id="dealerpoints">0</span>
+                <div id="dealer"></div>
+            </div>
+            <div class="hand">
+                <h2>Player</h2>
+                <span id="playerpoints">0</span>
+                <div id="player"></div>
+
+            </div>
         </div>
-        <div class="hand">
-            <h1>Player</h1>
-            <span id="playerpoints"></span>
-            <div id="player"></div>
-            <button id="hitButton">hit</button>
-            <button id="standButton">stand</button>
+        <div class="buttons">
+            <button id="hitButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-plus">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+
+            </button>
+            <button id="standButton">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-pause">
+                    <rect x="6" y="4" width="4" height="16"></rect>
+                    <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+            </button>
+
         </div>
-        <button id="dealButton">deal</button>
 
     </main>
     <script type="module" src="./src/index.js"></script>

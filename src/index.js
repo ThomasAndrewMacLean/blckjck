@@ -7,8 +7,13 @@ const dealButton = document.getElementById('dealButton');
 const standButton = document.getElementById('standButton');
 const dealer = new Hand('dealer');
 const player = new Hand('player');
+
+let canPlay = true;
+
 hitButton.addEventListener('click', () => {
-    player.takeCard(takeCard(cards));
+    if (canPlay) {
+        player.takeCard(takeCard(cards));
+    }
 });
 
 dealButton.addEventListener('click', () => {
@@ -17,6 +22,10 @@ dealButton.addEventListener('click', () => {
 let cards = [];
 
 standButton.addEventListener('click', () => {
+    if (!canPlay) {
+        return;
+    }
+    canPlay = false;
     let avg = getPoints(cards) / cards.length;
     dealer.draw();
     while (dealer.points + avg < 22 && dealer.points <= player.points) {
@@ -27,6 +36,7 @@ standButton.addEventListener('click', () => {
 });
 
 const newGame = () => {
+    canPlay = true;
     cards = getNewPack();
     shuffle(cards);
 
@@ -37,3 +47,5 @@ const newGame = () => {
     dealer.takeCard(takeCard(cards), true);
     player.takeCard(takeCard(cards));
 };
+
+newGame();
